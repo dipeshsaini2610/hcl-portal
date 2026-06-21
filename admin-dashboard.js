@@ -974,7 +974,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
 
         const response =
-        await fetch("http://localhost:5000/students");
+        await fetch("https://hcl-backend-portal.onrender.com");
 
         const students =
         await response.json();
@@ -1108,7 +1108,7 @@ document.addEventListener("click", async function(e) {
         try {
 
             await fetch(
-                `http://localhost:5000/students/${studentId}`,
+                `https://hcl-backend-portal.onrender.com/students/${studentId}`,
                 {
                     method: "DELETE"
                 }

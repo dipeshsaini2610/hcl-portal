@@ -2,7 +2,7 @@
 // STUDENT PROFILE MANAGER
 // =========================
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://hcl-backend-portal.onrender.com";
 
 const params = new URLSearchParams(window.location.search);
 const studentId = params.get("id");

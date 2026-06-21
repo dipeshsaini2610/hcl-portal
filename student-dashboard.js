@@ -2,7 +2,7 @@
 // STUDENT DASHBOARD JS
 // =========================
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://hcl-backend-portal.onrender.com";
 
 function updateClock() {
     const clock = document.getElementById("liveClock");

@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         addUserMessage(userText);
         chatInput.value = "";
         const response = await fetch(
-            "http://localhost:5000/chatbot",
+            "https://hcl-backend-portal.onrender.com/chatbot",
             {
                 method:"POST",
                 headers: {
