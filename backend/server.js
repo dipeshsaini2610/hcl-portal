@@ -39,6 +39,29 @@ app.post("/students", async (req, res) => {
         });
     }
 });
+app.post("/students/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const student = await Student.findOne({ email, password });
+
+    if (!student) {
+      return res.status(404).json({
+        message: "Invalid email or password"
+      });
+    }
+
+    res.json({
+      message: "Login successful",
+      student
+    });
+
+  } catch (err) {
+    res.status(500).json({
+      message: err.message
+    });
+  }
+});
 
 // Get all students
 app.get("/students", async (req, res) => {
