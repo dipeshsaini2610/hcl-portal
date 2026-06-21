@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration | HCL Internship Portal</title>
+
+    <link rel="stylesheet"
+          href="student-form.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <nav class="form-navbar">
+
+        <div class="logo-section">
+            <i class="ri-building-2-fill"></i>
+            <span>HCL Internship Portal</span>
+        </div>
+
+        <a href="index.html"
+           class="back-btn">
+            <i class="ri-arrow-left-line"></i>
+            Back
+        </a>
+
+    </nav>
+
+    <section class="registration-section">
+
+        <div class="registration-card">
+
+            <div class="form-header">
+
+                <div class="form-icon">
+                    <i class="ri-user-star-fill"></i>
+                </div>
+
+                <h1>Student Registration</h1>
+
+                <p>
+                    Complete your profile to access
+                    the Internship Dashboard
+                </p>
+
+            </div>
+
+            <form id="studentForm">
+
+                <div class="input-group">
+                    <label>Full Name</label>
+
+                    <input type="text"
+                           id="studentName"
+                           placeholder="Enter Full Name"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+
+                    <input type="email"
+                           id="studentEmail"
+                           placeholder="Enter Email Address"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>College Name</label>
+
+                    <input type="text"
+                           id="studentCollege"
+                           placeholder="Enter College Name"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Branch</label>
+
+                    <select id="studentBranch"
+                            required>
+                        <option value="">Select Branch</option>
+                        <option>CSE</option>
+                        <option>IT</option>
+                        <option>AI & DS</option>
+                        <option>ECE</option>
+                        <option>EEE</option>
+                        <option>Mechanical</option>
+                        <option>Civil</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+
+                    <input type="password"
+                           id="studentPassword"
+                           placeholder="Create Password"
+                           required>
+                </div>
+
+                <button type="submit"
+                        class="register-btn">
+                    Continue To Dashboard
+                    <i class="ri-arrow-right-line"></i>
+                </button>
+                <button type="button"
+                        id="loginBtn"
+                        class="register-btn">
+                    Login To Dashboard
+                <i class="ri-login-circle-line"></i>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script src="student-form.js"></script>
+
+</body>
+
+</html>

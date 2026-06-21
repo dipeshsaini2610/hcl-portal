@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+HCL Student Dashboard
+</title>
+
+<link rel="stylesheet"
+href="student-dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ======================
+SIDEBAR
+====================== -->
+
+<aside class="sidebar">
+
+<div class="sidebar-header">
+
+<div class="logo-box">
+
+<i class="ri-graduation-cap-fill"></i>
+
+</div>
+
+<div>
+
+<h2>HCL Intern</h2>
+
+<span>
+Student Portal
+</span>
+
+</div>
+
+</div>
+
+<ul class="sidebar-menu">
+
+<li class="active">
+
+<i class="ri-dashboard-line"></i>
+
+<span>Dashboard</span>
+
+</li>
+
+<li>
+
+<i class="ri-calendar-check-line"></i>
+
+<span>Attendance</span>
+
+</li>
+
+<li>
+
+<i class="ri-bar-chart-line"></i>
+
+<span>Performance</span>
+
+</li>
+
+<li>
+
+<i class="ri-task-line"></i>
+
+<span>Tasks</span>
+
+</li>
+
+<li>
+
+<i class="ri-award-line"></i>
+
+<span>Certificates</span>
+
+</li>
+
+<li>
+
+<i class="ri-notification-line"></i>
+
+<span>Announcements</span>
+
+</li>
+
+<li>
+
+<i class="ri-robot-line"></i>
+
+<span>AI Assistant</span>
+
+</li>
+
+<li>
+
+<i class="ri-settings-4-line"></i>
+
+<span>Settings</span>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ======================
+MAIN CONTENT
+====================== -->
+
+<main class="main-content">
+
+<!-- ======================
+TOPBAR
+====================== -->
+
+<header class="topbar">
+
+<div>
+
+<p>
+Internship Performance Dashboard
+</p>
+
+</div>
+
+<div class="topbar-right">
+
+<div class="search-box">
+
+<i class="ri-search-line"></i>
+
+<input
+type="text"
+placeholder="Search...">
+
+</div>
+
+<button class="icon-btn">
+
+<i class="ri-notification-3-line"></i>
+
+</button>
+
+<div
+class="live-clock"
+id="liveClock">
+
+00:00:00
+
+</div>
+
+<a
+href="index.html"
+class="home-btn">
+
+Home
+
+</a>
+
+<button
+class="logout-btn">
+
+Logout
+
+</button>
+
+</div>
+
+</header>
+
+<!-- ======================
+PROFILE + ATTENDANCE
+====================== -->
+
+<section class="overview-grid">
+
+<!-- Profile Card -->
+
+<div class="profile-card">
+
+<img
+src="https://i.pravatar.cc/200?img=32"
+alt="Student">
+
+<h2 id="welcomeStudent">
+Welcome Student
+</h2>
+
+<p id="studentCollegeDisplay">
+College
+</p>
+<p id="studentBranchDisplay">
+Branch
+</p>
+
+<div class="profile-info">
+
+<div>
+
+<h4>
+Mentor
+</h4>
+
+<span>
+Mr. R. Sharma
+</span>
+
+</div>
+
+<div>
+
+<h4>
+Duration
+</h4>
+
+<span>
+Jun - Aug 2026
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Attendance Circle -->
+
+<div class="attendance-card">
+
+<h3>
+Attendance Overview
+</h3>
+
+<div class="attendance-ring">
+
+<svg>
+
+<circle
+cx="90"
+cy="90"
+r="70">
+
+</circle>
+
+<circle
+cx="90"
+cy="90"
+r="70"
+class="progress-circle">
+
+</circle>
+
+</svg>
+
+<div class="attendance-text">
+
+<h2 id="attendanceValue">
+0%
+</h2>
+
+<span>
+Attendance
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Internship Progress -->
+
+<div class="progress-card">
+
+<h3>
+Internship Progress
+</h3>
+
+<div class="progress-wrapper">
+
+<div
+class="progress-fill"
+style="width:75%">
+
+</div>
+
+</div>
+
+<h2>
+75%
+Completed
+</h2>
+
+<p>
+Expected Completion:
+August 2026
+</p>
+
+</div>
+
+</section>
+
+<!-- ======================
+STATS CARDS
+====================== -->
+
+<section class="stats-grid">
+
+<div class="stat-card">
+
+<i class="ri-task-line"></i>
+
+<h2>
+12
+</h2>
+
+<p>
+Tasks Completed
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="ri-award-line"></i>
+
+<h2 id="performanceValue">
+0%
+</h2>
+
+<p>
+Performance Score
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="ri-file-chart-line"></i>
+
+<h2>
+5
+</h2>
+
+<p>
+Reports Submitted
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<i class="ri-medal-line"></i>
+
+<h2>
+A+
+</h2>
+
+<p>
+Current Grade
+</p>
+
+</div>
+
+</section>
+<!-- ======================
+ATTENDANCE + PERFORMANCE
+====================== -->
+
+<section class="analytics-grid">
+
+    <!-- Attendance Calendar -->
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>
+                Monthly Attendance
+            </h2>
+
+            <span>
+                June 2026
+            </span>
+
+        </div>
+
+        <div class="attendance-calendar" id="attendanceCalendar">
+
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+            <div class="day absent">A</div>
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+            <div class="day leave">L</div>
+
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+            <div class="day absent">A</div>
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+            <div class="day leave">L</div>
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+            <div class="day present">P</div>
+
+        </div>
+
+    </div>
+
+    <!-- Weekly Performance -->
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>
+                Weekly Performance
+            </h2>
+
+        </div>
+
+        <div class="chart-bars" id="weeklyPerformance">
+
+            <div class="bar" style="height:70%">
+                <span>Mon</span>
+            </div>
+
+            <div class="bar" style="height:85%">
+                <span>Tue</span>
+            </div>
+
+            <div class="bar" style="height:90%">
+                <span>Wed</span>
+            </div>
+
+            <div class="bar" style="height:75%">
+                <span>Thu</span>
+            </div>
+
+            <div class="bar" style="height:95%">
+                <span>Fri</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================
+SKILLS PERFORMANCE
+====================== -->
+
+<section class="skills-section">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>
+                Performance Metrics
+            </h2>
+
+        </div>
+
+        <div class="skill">
+
+            <div class="skill-info">
+
+                <span>
+                    Technical Skills
+                </span>
+
+                <strong>
+                    92%
+                </strong>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                class="progress-fill"
+                style="width:92%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="skill">
+
+            <div class="skill-info">
+
+                <span>
+                    Communication
+                </span>
+
+                <strong>
+                    86%
+                </strong>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                class="progress-fill"
+                style="width:86%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="skill">
+
+            <div class="skill-info">
+
+                <span>
+                    Discipline
+                </span>
+
+                <strong>
+                    95%
+                </strong>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                class="progress-fill"
+                style="width:95%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="skill">
+
+            <div class="skill-info">
+
+                <span>
+                    Project Work
+                </span>
+
+                <strong>
+                    90%
+                </strong>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                class="progress-fill"
+                style="width:90%">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================
+TASK TRACKER
+====================== -->
+
+<section class="task-section">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>
+                Assigned Tasks
+            </h2>
+
+        </div>
+
+        <div class="task-list" id="taskList">
+
+            <div class="task-item">
+
+                <input
+                type="checkbox"
+                checked>
+
+                <span>
+                    Complete Daily Attendance Report
+                </span>
+
+            </div>
+
+            <div class="task-item">
+
+                <input
+                type="checkbox"
+                checked>
+
+                <span>
+                    Submit Weekly Progress Report
+                </span>
+
+            </div>
+
+            <div class="task-item">
+
+                <input
+                type="checkbox">
+
+                <span>
+                    Upload Project Documentation
+                </span>
+
+            </div>
+
+            <div class="task-item">
+
+                <input
+                type="checkbox">
+
+                <span>
+                    Attend Technical Workshop
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================
+INTERNSHIP TIMELINE
+====================== -->
+
+<section class="timeline-section">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>
+                Internship Timeline
+            </h2>
+
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item completed">
+
+                <div class="timeline-dot"></div>
+
+                <div>
+
+                    <h4>
+                        Joining Completed
+                    </h4>
+
+                    <p>
+                        01 June 2026
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item completed">
+
+                <div class="timeline-dot"></div>
+
+                <div>
+
+                    <h4>
+                        Orientation Training
+                    </h4>
+
+                    <p>
+                        Completed
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item active">
+
+                <div class="timeline-dot"></div>
+
+                <div>
+
+                    <h4>
+                        Project Development
+                    </h4>
+
+                    <p>
+                        In Progress
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div>
+
+                    <h4>
+                        Final Evaluation
+                    </h4>
+
+                    <p>
+                        Upcoming
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div>
+
+                    <h4>
+                        Certificate Issuance
+                    </h4>
+
+                    <p>
+                        Pending
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ======================
+CERTIFICATES SECTION
+====================== -->
+
+<section class="certificate-section">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>
+                Certificates Center
+            </h2>
+
+        </div>
+
+        <div class="certificate-grid">
+
+            <div class="certificate-card">
+
+                <i class="ri-award-fill"></i>
+
+                <h3>
+                    Internship Completion
+                </h3>
+
+                <p>
+                    Available after successful completion
+                </p>
+
+                <button class="download-btn">
+                    Download
+                </button>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="ri-medal-fill"></i>
+
+                <h3>
+                    Technical Training
+                </h3>
+
+                <p>
+                    Workshop participation certificate
+                </p>
+
+                <button class="download-btn">
+                    Download
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================
+ANNOUNCEMENTS
+====================== -->
+
+<section class="announcement-section">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>
+                Latest Announcements
+            </h2>
+
+        </div>
+
+        <div class="announcement-list">
+
+            <div class="announcement-card">
+
+                <h4>
+                    Technical Workshop
+                </h4>
+
+                <p>
+                    New AI & Automation workshop scheduled.
+                </p>
+
+                <span>
+                    15 June 2026
+                </span>
+
+            </div>
+
+            <div class="announcement-card">
+
+                <h4>
+                    Report Submission
+                </h4>
+
+                <p>
+                    Submit weekly report before Friday.
+                </p>
+
+                <span>
+                    20 June 2026
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================
+ACHIEVEMENTS
+====================== -->
+
+<section class="achievement-section">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>
+                Achievements
+            </h2>
+
+        </div>
+
+        <div class="achievement-grid">
+
+            <div class="achievement-card">
+
+                <i class="ri-star-fill"></i>
+
+                <h3>
+                    Top Performer
+                </h3>
+
+            </div>
+
+            <div class="achievement-card">
+
+                <i class="ri-trophy-fill"></i>
+
+                <h3>
+                    90%+ Attendance
+                </h3>
+
+            </div>
+
+            <div class="achievement-card">
+
+                <i class="ri-medal-fill"></i>
+
+                <h3>
+                    Best Project Submission
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================
+RECENT ACTIVITY
+====================== -->
+
+<section class="activity-section">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>
+                Recent Activity
+            </h2>
+
+        </div>
+
+        <div class="activity-feed" id="activityFeed">
+
+            <div class="activity-item">
+
+                <i class="ri-file-chart-line"></i>
+
+                <div>
+
+                    <h4>
+                        Report Submitted
+                    </h4>
+
+                    <p>
+                        Weekly internship report uploaded.
+                    </p>
+
+                </div>
+
+                <span>
+                    2 Hours Ago
+                </span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="ri-task-line"></i>
+
+                <div>
+
+                    <h4>
+                        Task Completed
+                    </h4>
+
+                    <p>
+                        Project documentation completed.
+                    </p>
+
+                </div>
+
+                <span>
+                    Yesterday
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================
+AI ASSISTANT
+====================== -->
+
+<!-- AI Chatbot Toggle Button -->
+<button id="chatbotToggle" class="chatbot-toggle">
+    🤖
+</button>
+
+<!-- Chatbot Container -->
+<div id="chatbotContainer" class="chatbot-container">
+
+    <div class="chatbot-header">
+
+        <div>
+            <h3>HCL AI Assistant</h3>
+            <span>Online</span>
+        </div>
+
+        <button id="closeChatbot">
+            ✕
+        </button>
+
+    </div>
+
+    <div id="chatMessages" class="chat-messages">
+
+        <div class="bot-message">
+            👋 Welcome to HCL Internship Assistant
+
+            <br><br>
+
+            I can help you with:
+
+            <br>• Attendance Queries
+            <br>• Internship Reports
+            <br>• Certificates
+            <br>• Tasks & Training
+            <br>• Career Guidance
+
+        </div>
+
+    </div>
+
+    <div class="chat-input-area">
+
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Ask anything..."
+        >
+
+        <button id="sendBtn">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ======================
+FOOTER
+====================== -->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 Hindustan Copper Limited |
+        Internship Management Portal
+
+    </p>
+
+</footer>
+
+</main>
+
+<script src="student-dashboard.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

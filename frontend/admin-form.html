@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Admin Access | HCL Internship Portal</title>
+
+<link rel="stylesheet"
+      href="admin-form.css">
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet">
+```
+
+</head>
+
+<body>
+
+```
+<!-- Background Shapes -->
+
+<div class="bg-shape shape-1"></div>
+<div class="bg-shape shape-2"></div>
+<div class="bg-shape shape-3"></div>
+
+<!-- Navbar -->
+
+<nav class="form-navbar">
+
+    <div class="logo-section">
+
+        <i class="ri-building-2-fill"></i>
+
+        <span>HCL Internship Portal</span>
+
+    </div>
+
+    <a href="index.html"
+       class="back-btn">
+
+        <i class="ri-arrow-left-line"></i>
+
+        Back
+
+    </a>
+
+</nav>
+
+<!-- Main Section -->
+
+<section class="registration-section">
+
+    <div class="registration-card">
+
+        <div class="form-header">
+
+            <div class="form-icon">
+
+                <i class="ri-admin-fill"></i>
+
+            </div>
+
+            <h1>Admin Access Portal</h1>
+
+            <p>
+                Enter your details to access
+                the Admin Dashboard
+            </p>
+
+        </div>
+
+        <form id="adminForm">
+
+            <div class="input-group">
+
+                <label>
+                    Admin Name
+                </label>
+
+                <input
+                    type="text"
+                    id="adminName"
+                    placeholder="Enter Full Name"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Employee ID
+                </label>
+
+                <input
+                    type="text"
+                    id="employeeId"
+                    placeholder="Enter Employee ID"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Department
+                </label>
+
+                <select
+                    id="adminDepartment"
+                    required>
+
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option>
+                        Human Resources
+                    </option>
+
+                    <option>
+                        Training
+                    </option>
+
+                    <option>
+                        IT Department
+                    </option>
+
+                    <option>
+                        Administration
+                    </option>
+                    <Option>
+                        Finance & Accounts
+                    </Option>
+                    <option>
+                        Information Technology
+                    </option>
+                    <option>
+                        Research & Development
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="adminEmail"
+                    placeholder="Enter Email Address"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Access Code
+                </label>
+
+                <input
+                    type="password"
+                    id="accessCode"
+                    placeholder="Enter Access Code"
+                    required>
+
+            </div>
+
+            <button
+                type="submit"
+                class="register-btn">
+
+                Access Dashboard
+
+                <i class="ri-arrow-right-line"></i>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script src="admin-form.js"></script>
+```
+
+</body>
+
+</html>

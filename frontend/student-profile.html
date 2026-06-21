@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Student Attendance Manager
+    </title>
+
+    <link rel="stylesheet"
+          href="student-profile.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="profile-page">
+
+    <!-- HEADER -->
+
+    <div class="top-bar">
+
+        <button
+        class="back-btn"
+        onclick="window.location.href='admin-dashboard.html'">
+
+            <i class="ri-arrow-left-line"></i>
+
+            Back To Dashboard
+
+        </button>
+
+        <button
+        id="saveAttendanceBtn"
+        class="save-btn">
+
+            <i class="ri-save-line"></i>
+
+            Save Changes
+
+        </button>
+
+    </div>
+
+    <!-- STUDENT CARD -->
+
+    <div class="student-card">
+
+        <div class="section-title">
+
+            <i class="ri-user-line"></i>
+
+            <h2>
+                Student Information
+            </h2>
+
+        </div>
+
+        <div class="student-grid">
+
+            <div class="input-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                type="text"
+                id="studentName">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Branch
+                </label>
+
+                <input
+                type="text"
+                id="studentBranch">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Attendance %
+                </label>
+
+                <input
+                type="number"
+                id="studentAttendance">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                type="email"
+                id="studentEmail">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    College
+                </label>
+
+                <input
+                type="text"
+                id="studentCollege">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Performance %
+                </label>
+
+                <input
+                type="number"
+                id="studentPerformance">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Progress %
+                </label>
+
+                <input
+                type="number"
+                id="studentProgress">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>
+                    Status
+                </label>
+
+                <select id="studentStatus">
+
+                    <option>
+                        Active
+                    </option>
+
+                    <option>
+                        Inactive
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+        <!-- ATTENDANCE SUMMARY -->
+
+    <div class="summary-section">
+
+        <div class="summary-card present">
+
+            <i class="ri-checkbox-circle-fill"></i>
+
+            <div>
+
+                <h3 id="presentCount">
+                    0
+                </h3>
+
+                <p>
+                    Present Days
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="summary-card absent">
+
+            <i class="ri-close-circle-fill"></i>
+
+            <div>
+
+                <h3 id="absentCount">
+                    0
+                </h3>
+
+                <p>
+                    Absent Days
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="summary-card leave">
+
+            <i class="ri-calendar-event-fill"></i>
+
+            <div>
+
+                <h3 id="leaveCount">
+                    0
+                </h3>
+
+                <p>
+                    Leave Days
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="summary-card total">
+
+            <i class="ri-calendar-check-line"></i>
+
+            <div>
+
+                <h3 id="totalAttendance">
+                    0%
+                </h3>
+
+                <p>
+                    Attendance
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CALENDAR SECTION -->
+
+    <div class="calendar-card">
+
+        <div class="section-title">
+
+            <i class="ri-calendar-2-line"></i>
+
+            <h2>
+                Attendance Calendar
+            </h2>
+
+        </div>
+
+        <!-- CONTROLS -->
+
+        <div class="calendar-controls">
+
+            <div class="left-controls">
+
+                <select id="monthSelect">
+
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+
+                </select>
+
+                <select id="yearSelect">
+
+                    <option>
+                        2025
+                    </option>
+
+                    <option selected>
+                        2026
+                    </option>
+
+                    <option>
+                        2027
+                    </option>
+
+                    <option>
+                        2028
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="attendance-legend">
+
+                <span class="legend present-dot">
+                    Present
+                </span>
+
+                <span class="legend absent-dot">
+                    Absent
+                </span>
+
+                <span class="legend leave-dot">
+                    Leave
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- DAYS HEADER -->
+
+        <div class="calendar-header">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+        <!-- CALENDAR GRID -->
+
+        <div
+        id="calendarGrid"
+        class="calendar-grid">
+
+        </div>
+                <!-- QUICK ACTIONS -->
+
+        <div class="calendar-actions">
+
+            <button
+            id="markAllPresent"
+            class="action-btn present-btn">
+
+                <i class="ri-checkbox-circle-line"></i>
+
+                Mark All Present
+
+            </button>
+
+            <button
+            id="markAllAbsent"
+            class="action-btn absent-btn">
+
+                <i class="ri-close-circle-line"></i>
+
+                Mark All Absent
+
+            </button>
+
+            <button
+            id="markAllLeave"
+            class="action-btn leave-btn">
+
+                <i class="ri-calendar-event-line"></i>
+
+                Mark All Leave
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ADMIN NOTES -->
+
+    <div class="notes-card">
+
+        <div class="section-title">
+
+            <i class="ri-sticky-note-line"></i>
+
+            <h2>
+                Admin Notes
+            </h2>
+
+        </div>
+
+        <textarea
+        id="adminNotes"
+        placeholder="Write remarks, feedback, performance observations, internship notes...">
+
+        </textarea>
+
+    </div>
+
+    <!-- RECENT ACTIVITY -->
+
+    <div class="activity-card">
+
+        <div class="section-title">
+
+            <i class="ri-history-line"></i>
+
+            <h2>
+                Recent Activity
+            </h2>
+
+        </div>
+
+        <div
+        id="activityFeed"
+        class="activity-feed">
+
+            <div class="activity-item">
+
+                <i class="ri-user-follow-line"></i>
+
+                Student profile loaded
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="ri-calendar-check-line"></i>
+
+                Attendance system ready
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- LOADER -->
+
+<div
+id="loader"
+class="loader">
+
+    <div class="spinner"></div>
+
+</div>
+
+<!-- SUCCESS POPUP -->
+
+<div
+id="successPopup"
+class="success-popup">
+
+    <i class="ri-checkbox-circle-fill"></i>
+
+    Changes Saved Successfully
+
+</div>
+
+<!-- SCRIPT -->
+
+<script src="student-profile.js"></script>
+
+</body>
+
+</html>
