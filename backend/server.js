@@ -1,7 +1,9 @@
+const dns = require("node:dns/promises");
+dns.setServers(["1.1.1.1","8.8.8.8"]);
 const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
-
+require("dotenv").config();
 const app = express();
 
 app.use(cors());
@@ -11,7 +13,7 @@ app.get("/", (req, res) => {
     res.send("Backend Running Successfully");
 });
 
-mongoose.connect("mongodb://127.0.0.1:27017/hclinterns")
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
     console.log("MongoDB Connected");
 })
@@ -184,7 +186,7 @@ app.delete("/students/:id", async (req, res) => {
 
 // Chatbot
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-require("dotenv").config();
+
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const model = genAI.getGenerativeModel({
@@ -210,6 +212,8 @@ app.post("/chatbot", async (req, res) => {
     }
 });
 
-app.listen(5000, () => {
-    console.log("Server Started On Port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server Started On Port ${PORT}`);
 });
