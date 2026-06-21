@@ -974,7 +974,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
 
         const response =
-        await fetch("https://hcl-backend-portal.onrender.com");
+        await fetch("https://hcl-backend-portal.onrender.com/students");
 
         const students =
         await response.json();
